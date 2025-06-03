@@ -166,8 +166,11 @@ jobs:
             cmake_generator: Ninja
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repo with submodules
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
 
       - name: Set timestamp, zip name, repo visibility
         env:
