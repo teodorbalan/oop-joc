@@ -1,0 +1,22 @@
+🔧 1. Mergi în directorul proiectului
+În terminalul MSYS2 MinGW 64-bit, execută:
+
+bash
+Copy
+Edit
+cd /c/Users/Teodor/Downloads/oop-template-main/oop-joc
+💡 Observație: în MSYS2, C: devine /c/, D: devine /d/ etc.
+
+🔧 2. Rulează comanda completă de CMake
+Acum că ești în directorul corect, rulează din nou:
+
+bash
+Copy
+Edit
+cmake -S . -B build -G Ninja \
+  -DCMAKE_BUILD_TYPE=Debug \
+  -DCMAKE_C_COMPILER=/mingw64/bin/gcc.exe \
+  -DCMAKE_CXX_COMPILER=/mingw64/bin/g++.exe
+
+In order to run use 
+cmake --build build --config Debug --parallel 6 && build\\oop.exe
